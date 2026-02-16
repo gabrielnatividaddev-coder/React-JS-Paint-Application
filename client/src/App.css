@@ -1,0 +1,28 @@
+.test {
+  background-image:url("../src/assets/words.jpg");
+  width: inherit;
+  height: iherit;
+  object-fit: fill;
+}
+.itemsdown {
+  background-image:url("../src/assets/words.jpg");
+  overflow: hidden;
+}
+.textsd {
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 1000px) {
+  .textsd {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .textsd {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .textsd {
+    font-size: 1.1rem;
+  }
+}
