@@ -52,7 +52,7 @@ class App extends React.Component {
               bg={'white'}
               onClick={
                 () => {
-                    this.setState({activePen: this.state.activePen==true ? true: !this.state.activePen,
+                    this.setState({activePen: this.state.activePen == true ? true: !this.state.activePen,
                       activeLine: false,
                       activeBox: false,
                       activeCircle: false
@@ -67,7 +67,7 @@ class App extends React.Component {
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
               onClick={
                 () => {
-                    this.setState({activeLine: this.state.activeLine==true ? true: !this.state.activeLine, 
+                    this.setState({activeLine: this.state.activeLine == true ? true: !this.state.activeLine, 
                         activePen: false,
                         activeBox: false,
                         activeCircle: false
@@ -82,7 +82,7 @@ class App extends React.Component {
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
               onClick={
                 () => {
-                this.setState({activeBox: this.state.activeBox==true ? true: !this.state.activeBox, 
+                this.setState({activeBox: this.state.activeBox == true ? true: !this.state.activeBox, 
                   activePen: false,
                   activeLine: false,
                   activeCircle: false
@@ -97,7 +97,7 @@ class App extends React.Component {
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
               onClick={
                 () => {
-                this.setState({activeCircle: this.state.activeCircle==true ? true: !this.state.activeCircle, 
+                this.setState({activeCircle: this.state.activeCircle == true ? true: !this.state.activeCircle, 
                   activePen: false,
                   activeLine: false,
                   activeBox: false

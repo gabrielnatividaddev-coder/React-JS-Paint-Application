@@ -1,7 +1,6 @@
 # react-canvas-paint
 
-This is a React JS paint website application. The website application has a guide on how to use tools/colors etc. The frontend used in this application is React JS and for the Backend Node JS with express js framework. This application uses React-Redux for state management. Github link https://github.com/ricaricabile/react-canvas-paint.
-
+This is a React JS paint website application. The website application has a guide on how to use tools/colors etc. The frontend used in this application is React JS and for the Backend Node JS with express js framework. This application uses React-Redux for state management.
 To run application locally go to 
 **Root Folder**
 enter
