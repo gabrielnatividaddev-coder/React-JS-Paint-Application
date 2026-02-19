@@ -41,9 +41,9 @@ const ReactCanvas = props => {
         }
         drawCanvas();
         
-        percent = 75 / 100;
+        percent = 90 / 100;
         navig.width = window.screen.availWidth * percent;
-        percent = 70 / 100;
+        percent = 65 / 100;
         navig.height = window.screen.availHeight * percent;
         const ctxnavig = navig.getContext('2d');
 
