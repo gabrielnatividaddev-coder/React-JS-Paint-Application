@@ -17,9 +17,9 @@ const ReactCanvas = props => {
         let canvas = document.getElementById('front');
         let navig = document.getElementById('back');
 
-        percent = 75 / 100;
+        percent = 90 / 100;
         canvas.width = window.screen.availWidth * percent;
-        percent = 70 / 100;
+        percent = 65 / 100;
         canvas.height = window.screen.availHeight * percent;
         const context = canvas.getContext('2d');
         const drawCanvas = () => {

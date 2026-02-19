@@ -14,64 +14,95 @@ import dartboardv7 from '../src/assets/dartboardv7.png';
 class App extends React.Component {
   constructor() {
     super();
+    this.state = {
+      activePen: true,
+      activeLine: false,
+      activeBox: false,
+      activeCircle: false
+    }
   }
-
-
   render() {
     return (
-      <><div style={{boxSizing:'border-box', padding:0,margin:0, height: window.screen.availHeight, display: "flex", flexDirection: 'row',  }}>
-        <div className="test" style={{ paddingTop: '20px', width:window.screen.availWidth * (25/100), height: window.screen.availHeight }}>
-        <div style={{width: window.screen.availWidth * (23/100), textAlign:'center'}}  >
-          <img width={window.screen.availWidth * (23/100)} className="textBox" src={dartboardv7}>
-          </img>
-        <Text fw={'bold'} p={15} className="textsd" c="violet" style={{width:window.screen.availWidth * (23/100), position:'absolute',top: '8px',
-          left: '0px', letterSpacing:'1px', lineHeight:'2' ,borderRadius:'5px', opacity: '1 !important'}}>
-            <Mark bg={'black'} c="yellow" pl={5} pr={5} pt={5}>
-            Welcome to this painting website application. The window on the center
-            is where you will be able to draw. Pen will be the tool used by default.
-            You can change tool and color by the selections on the bottom portion of the canvas.
-            Try all tools.
-            Enjoy!
-            </Mark>
-          </Text>
-          </div>
+      <><div style={{boxSizing:'border-box', padding:0,margin:0, height: window.screen.availHeight, display: "flex", flexDirection: 'column', alignItems:'center' }}>
+        <div>
+        <Text ta={'center'} fz ={50} fw={500}> Welcome to this Painting Application </Text>
+        <div style={{display: 'flex', justifyContent:'center'}}>
+        <Text c={'gray'} ta={'center'} fz ={15} style={{width:'90%'}}> 
+          This is an example of how to create a Painting Application in React JS. Pen is the tool used by default.
+                  You can change tool and color by the selections on the bottom portion of the canvas.
+                  Try all tools.
+                  Enjoy!
+        </Text>      
+        </div>
         </div>
         <div style={{  display: 'flex', flexDirection: 'column' }}>
-          <div id="canvasRenderer" style={{ height: window.screen.availHeight * (70/100), width:window.screen.availWidth * (75/100) }}>
+          <div id="canvasRenderer" style={{ height: window.screen.availHeight * (65/100), width:window.screen.availWidth * (90/100) }}>
           <ReactCanvas/> 
           </div>
-          <div className="itemsdown" style={{ height: window.screen.availHeight * (30/100) ,display: 'flex',  alignContent:'center', alignItems:'flex-start'}}>
-          <Button id="clear" c={'gray'} variant="outline" style={{border:'solid 1px white'}}> Clear Screen</Button>
+          <div className="itemsdown" style={{ height: window.screen.availHeight * (35/100) ,display: 'flex',  alignContent:'center', alignItems:'flex-start'}}>
+          <Button id="clear" c={'black'} variant="outline" style={{border:'solid 1px'}}> Clear Screen</Button>
           <Container w="28%" mt={'xl'} p={0} style={{display: 'flex', justifyContent:'flex-end'}}>
             <div style={{border: 'dashed 1px gray', height: '36px'}}>
             <Pencil
               id="pen"
               size={34}
               strokeWidth={2}
-              color={'black'}
+              color={this.state.activePen ? 'blue': 'black'}
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
               bg={'white'}
+              onClick={
+                () => {
+                    this.setState({activePen: this.state.activePen==true ? true: !this.state.activePen,
+                      activeLine: false,
+                      activeBox: false,
+                      activeCircle: false
+                })}
+              }
             />
             <Line
               id="line"
               size={34}
               strokeWidth={2}
-              color={'black'}
+              color={this.state.activeLine ? 'blue': 'black'}
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
+              onClick={
+                () => {
+                    this.setState({activeLine: this.state.activeLine==true ? true: !this.state.activeLine, 
+                        activePen: false,
+                        activeBox: false,
+                        activeCircle: false
+                  })}
+                }
             />
             <AspectRatio
               id="box"
               size={34}
               strokeWidth={2}
-              color={'black'}
+              color={this.state.activeBox ? 'blue': 'black'}
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
+              onClick={
+                () => {
+                this.setState({activeBox: this.state.activeBox==true ? true: !this.state.activeBox, 
+                  activePen: false,
+                  activeLine: false,
+                  activeCircle: false
+                  })}
+                }
             />
             <EditCircle
               id="circle"
               size={34}
               strokeWidth={2}
-              color={'black'}
+              color={this.state.activeCircle ? 'blue': 'black'}
               style={{border: 'solid 1px black', cursor: 'pointer', background:'white'}}
+              onClick={
+                () => {
+                this.setState({activeCircle: this.state.activeCircle==true ? true: !this.state.activeCircle, 
+                  activePen: false,
+                  activeLine: false,
+                  activeBox: false
+                })}
+              }
             />
             </div>
             </Container>
