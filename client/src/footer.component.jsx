@@ -6,7 +6,7 @@ export default function Footer() {
     <div id="footer" className={classes.footer} >
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2024 Mr.Richards.Developers. All rights reserved.
+          © 2024 Gabriel.Natividad.Developers. All rights reserved.
         </Text>
       </Container>
     </div>
