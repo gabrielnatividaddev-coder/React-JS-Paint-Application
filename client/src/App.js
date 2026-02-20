@@ -9,7 +9,6 @@ import {Badge,
 import { Pencil, Line, BoxMultiple, EditCircle, AspectRatio, LetterSpacing, Bold,Square } from 'tabler-icons-react'
 
 import ReactCanvas from '../src/Canvas/react-canvas.js';
-import dartboardv7 from '../src/assets/dartboardv7.png';
 
 class App extends React.Component {
   constructor() {

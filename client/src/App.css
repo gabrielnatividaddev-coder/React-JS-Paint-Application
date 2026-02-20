@@ -1,9 +1,3 @@
-.test {
-  background-image:url("../src/assets/words.jpg");
-  width: inherit;
-  height: iherit;
-  object-fit: fill;
-}
 .itemsdown {
   /* background-image:url("../src/assets/words.jpg"); */
   overflow: hidden;
